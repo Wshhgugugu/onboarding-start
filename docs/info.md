@@ -1,20 +1,28 @@
-<!---
+# ASIC Onboarding Project - Shiheng
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+## Description
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+SPI-controlled PWM peripheral for Tiny Tapeout.
 
-## How it works
+## Features
 
-Explain how your project works
+- SPI interface for register configuration
+- 16-channel PWM output
+- Configurable duty cycle
 
-## How to test
+## Register Map
 
-Explain how to use your project
+| Address | Name | Description |
+|---------|------|-------------|
+| 0x00 | EN_REG_OUT_7_0 | Output enable for channels 0-7 |
+| 0x01 | EN_REG_OUT_15_8 | Output enable for channels 8-15 |
+| 0x02 | EN_REG_PWM_7_0 | PWM enable for channels 0-7 |
+| 0x03 | EN_REG_PWM_15_8 | PWM enable for channels 8-15 |
+| 0x04 | PWM_DUTY_CYCLE | PWM duty cycle (0-255) |
 
-## External hardware
+## How to Use
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+1. Configure output enable registers
+2. Configure PWM enable registers  
+3. Set duty cycle
+4. Outputs will generate PWM signals accordingly
