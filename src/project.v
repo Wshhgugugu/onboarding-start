@@ -1,4 +1,4 @@
-module UWASIC_Shiheng (
+module tt_um_UWASIC_Shiheng (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
