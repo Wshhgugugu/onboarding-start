@@ -7,8 +7,9 @@ module tt_um_UWASIC_Shiheng (
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
-    assign uio_oe = 8'hFF; 
 );
+
+  assign uio_oe = 8'hFF; 
 
   wire [7:0] en_reg_out_7_0;
   wire [7:0] en_reg_out_15_8;
