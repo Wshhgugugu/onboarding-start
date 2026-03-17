@@ -3,26 +3,15 @@ project:
   title:        "ASIC Onboarding Project - Shiheng"      # ASIC Onboarding Project - Shiheng
   author:       "Shiheng"      # Shiheng
   discord:      "Shiheng"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "The onboarding project for Shiheng"      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
-
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  description:  "SPI-controlled PWM peripheral for Tiny Tapeout."      # One line description of what your project does
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_UWASIC_Shiheng"
-
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  top_module:  "UWASIC_Shiheng"
   source_files:
     - "project.v"
     - "spi_peripheral.v"
     - "pwm_peripheral.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
   ui[0]: "SCLK"
@@ -34,25 +23,25 @@ pinout:
   ui[6]: ""
   ui[7]: ""
 
-  # Outputs
-  uo[0]: "OUT1"
-  uo[1]: "OUT2 "
-  uo[2]: "OUT3"
-  uo[3]: "OUT4"
-  uo[4]: "OUT5"
-  uo[5]: "OUT6"
-  uo[6]: "OUT7"
-  uo[7]: "OUT8"
-
+ # Outputs
+  uo[0]: "OUT_0"
+  uo[1]: "OUT_1"
+  uo[2]: "OUT_2"
+  uo[3]: "OUT_3"
+  uo[4]: "OUT_4"
+  uo[5]: "OUT_5"
+  uo[6]: "OUT_6"
+  uo[7]: "OUT_7"
+  
   # Bidirectional pins
-  uio[0]: "OUT9"
-  uio[1]: "OUT10"
-  uio[2]: "OUT11"
-  uio[3]: "OUT12"
-  uio[4]: "OUT13"
-  uio[5]: "OUT14"
-  uio[6]: "OUT15"
-  uio[7]: "OUT16"
+  uio[0]: "OUT_8"
+  uio[1]: "OUT_9"
+  uio[2]: "OUT_A"
+  uio[3]: "OUT_B"
+  uio[4]: "OUT_C"
+  uio[5]: "OUT_D"
+  uio[6]: "OUT_E"
+  uio[7]: "OUT_F"
 
 # Do not change!
 yaml_version: 6
