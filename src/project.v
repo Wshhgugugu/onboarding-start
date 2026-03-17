@@ -17,8 +17,6 @@ module tt_um_UWASIC_Shiheng (
   wire [7:0] en_reg_pwm_15_8;
   wire [7:0] pwm_duty_cycle;
 
-  assign uio_oe = en_reg_out_15_8;
-
   spi_peripheral spi_peripheral_inst (
         .clk(clk),
         .rst_n(rst_n),

@@ -12,17 +12,17 @@ module spi_peripheral (
 );
 
     reg [2:0] sclk_sync;
-    reg [2:0] copi_sync;
+    reg [1:0] copi_sync;
     reg [2:0] ncs_sync;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             sclk_sync <= 3'b000;
-            copi_sync <= 3'b000;
+            copi_sync <= 2'b00;
             ncs_sync  <= 3'b111;
         end else begin
             sclk_sync <= {sclk_sync[1:0], SCLK};
-            copi_sync <= {copi_sync[1:0], COPI};
+            copi_sync <= {copi_sync[0], COPI};
             ncs_sync  <= {ncs_sync[1:0], nCS};
         end
     end
