@@ -4,12 +4,13 @@ project:
   author:       "Shiheng"      # Shiheng
   discord:      "Shiheng"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "SPI-controlled PWM peripheral for Tiny Tapeout."      # One line description of what your project does
-
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  language:     "Verilog"
+  clock_hz:     0
+  
   top_module:   "tt_um_UWASIC_Shiheng"
   tiles:        "1x1"
-  language:     "Verilog"
-  clock_hz:     10000000
+  
+  
   source_files:
     - "project.v"
     - "spi_peripheral.v"
